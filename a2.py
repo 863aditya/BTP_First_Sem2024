@@ -30,10 +30,14 @@ def generate_input(layers,p,n):
     file.close()
 
 import subprocess as sbp
-for i in range(100, 201, 100):
+for i in range(900, 901, 100):
     for j in range(1,3):
         p=0.9
+        # p-=0.1
         while p>=0.1:
+            if p>=0.6:
+                p-=0.1
+                continue
             # generate_input(j,p,i)
             filename="./datasets/"+str(i)+"_"+str(j)+"_"+str(p)+".dataset"
             rfile="./results/"+str(i)+"_"+str(j)+"_"+str(p)+".out"

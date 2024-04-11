@@ -274,7 +274,7 @@ void solve(bool ttt=false){
     // 	cerr<<ele<<enl;
     // }
     // cout<<ImprovedGreedy(0.6,5,4)<<enl;
-    for(db x=0.1;x<=1.0;x+=0.1){
+    for(db x=0.1;x<=0.6;x+=0.1){
         cout<<sz(ImprovedGreedy(x,(0.1)*n,(0.2)*n))<<enl;
     }
 }
